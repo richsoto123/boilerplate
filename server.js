@@ -5,7 +5,7 @@ const port = 4000;
 //Middleware
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: true}));
 app.get('/api/students', (req, res) => {
     const students = [
         { id: 1, firstName: 'Captain', lastName: 'Fancy'},
